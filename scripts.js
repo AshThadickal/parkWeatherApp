@@ -10,10 +10,14 @@
 
 // manipulate the page such that the value from the stored variables will be displayed to the user byway of a template literal with ${variable}
 
-fetch('https://api.openweathermap.org/data/2.5/weather?q=florida&appid=4310fd1fc9ffb9abc888f8569b40e704')
+fetch('https://api.openweathermap.org/data/2.5/weather?q=ottwa&appid=4310fd1fc9ffb9abc888f8569b40e704')
     .then(function (response) {
         return response.json();
     })
     .then(function (jsonResult) {
-        console.log(jsonResult)
+        if (jsonResult.cod === '404') {
+            console.log('please check the spelling of the city')
+        } else {
+            console.log(jsonResult)
+        }
     })
