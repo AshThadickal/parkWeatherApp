@@ -12,12 +12,17 @@
 
 fetch('https://api.openweathermap.org/data/2.5/weather?q=ottwa&appid=4310fd1fc9ffb9abc888f8569b40e704')
     .then(function (response) {
+        if (response.ok) {
         return response.json();
+        } else {
+            throw new Error(response.statusText)
+        }
     })
     .then(function (jsonResult) {
-        if (jsonResult.cod === '404') {
-            console.log('please check the spelling of the city')
-        } else {
-            console.log(jsonResult)
+        console.log(jsonResult)
+        })
+    .catch((err) => {
+        if (err.message) {
+            console.log('we did it')
         }
     })
