@@ -7,22 +7,24 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="./styles/sass/styles.css">
     <title>Let's Go To The Park!!</title>
 </head>
 <body>
 
     <header class="wrapper">
-        <h1>Can we go <span>to the park</span> <span>today?</span></h1>
+        <h1>Can We Go <span>To The Park</span> <span>Today?</span></h1>
     </header>
 
     <main>
         <section class="wrapper">
             
             <form action="#" method="#" class="search" name="search">
-                <label for="searchInput">Please enter your city:</label>
-                <input type="text" placeholder="Toronto" id="searchBar">
-                <button type="submit">GO!</button>
+                <label for="searchInput" class ="searchInput">Please enter your city:</label>
+                <div class = "inputAndButton">
+                    <input type="text" placeholder="Toronto" id="searchBar">
+                    <button type="submit">GO!</button>
+                </div>
             </form>
 
         </section>
@@ -47,8 +49,8 @@
         </section>
     </main>
 
-    <footer>
-        <p>Copyright © <a href="www.junocollege.com">Juno College</a> 2021</p>
+    <footer class = "wrapper">
+        <p>Copyright © <a href="www.junocollege.com">Juno College</a> 2022</p>
     </footer>
 
     <script src="scripts.js"></script>
