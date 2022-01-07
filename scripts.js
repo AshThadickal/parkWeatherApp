@@ -41,7 +41,7 @@ const myApp = {}
 // -  Create init method on namespace object
 
 myApp.init = () => {
-    myApp.getWeather ()
+    myApp.userInput();
 }
 
 // - Add API key as property to our namespace object
@@ -50,23 +50,24 @@ myApp.key = ('4310fd1fc9ffb9abc888f8569b40e704')
 myApp.url = ('https://api.openweathermap.org/data/2.5/weather');
 
 // GET DATA!
-myApp.getWeather = () => {
+myApp.getWeather = (searchQuery) => {
     const url = new URL (myApp.url);
     url.search = new URLSearchParams ({
-        q: "Toronto",
+        q: searchQuery,
+        units: 'metric',
         appid:myApp.key,
     })
-    fetch (url) 
-        .then ((res) => {
+    fetch(url) 
+        .then((res) => {
             if (res.ok === true){
             return res.json ();
             } else {
                 throw new Error (res.statusText)
-            }
-                
+            }                
         })
         .then((jsonData) => {
             console.log(jsonData);
+            // call a function to display the data with the jsonData results
         })
         .catch((err) => {
             if (err.message === "Not Found") {
@@ -79,13 +80,16 @@ myApp.getWeather = () => {
 
 }
 
+    myApp.userInput = () => {
+        const form = document.querySelector('form');
+        form.addEventListener('submit', (event) => {
+            event.preventDefault;
+            myApp.userCity = form[0].value;
+            myApp.getWeather(myApp.userCity);
+        })
+    }
+
 myApp.init();
-
-// - Test API
-
-
-
-// Create new URL object and url search params object!
 
 
 
