@@ -28,15 +28,9 @@
 //     })
 
 
-
-
-
 // 1. Create Namespace Object 
 
 const myApp = {}
-
-
-
 
 // -  Create init method on namespace object
 
@@ -48,6 +42,16 @@ myApp.init = () => {
 
 myApp.key = ('4310fd1fc9ffb9abc888f8569b40e704')
 myApp.url = ('https://api.openweathermap.org/data/2.5/weather');
+
+
+myApp.userInput = () => {
+    const form = document.querySelector('form');
+    form.addEventListener('submit', (event) => {
+        event.preventDefault;
+        myApp.userCity = form[0].value;
+        myApp.getWeather(myApp.userCity);
+    })
+}
 
 // GET DATA!
 myApp.getWeather = (searchQuery) => {
@@ -66,7 +70,7 @@ myApp.getWeather = (searchQuery) => {
             }                
         })
         .then((jsonData) => {
-            console.log(jsonData);
+            myApp.displayWeather(jsonData);
             // call a function to display the data with the jsonData results
         })
         .catch((err) => {
@@ -80,13 +84,14 @@ myApp.getWeather = (searchQuery) => {
 
 }
 
-    myApp.userInput = () => {
-        const form = document.querySelector('form');
-        form.addEventListener('submit', (event) => {
-            event.preventDefault;
-            myApp.userCity = form[0].value;
-            myApp.getWeather(myApp.userCity);
-        })
+
+    myApp.displayWeather = (weatherResults) => {
+        const weatherContainer = document.querySelector('.weatherDescription');
+        const displayData = document.createElement('p');
+        displayData.textContent = (`The temperature is currently ${weatherResults.main.temp}, it feels like ${weatherResults.main.feels_like}. Weather Description: ${weatherResults.weather[0].description}.`)
+       
+        weatherContainer.innerHTML = "";
+        weatherContainer.append (displayData);
     }
 
 myApp.init();
