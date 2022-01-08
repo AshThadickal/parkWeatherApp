@@ -57,10 +57,10 @@ myApp.getWeather = (searchQuery) => {
         .catch((err) => {
             if (err.message === "Not Found") {
                 document.querySelector('.spellingModal').style.display = 'block';
-                // myApp.closeSpellingModal();
+                myApp.closeModal();
             } else {
             document.querySelector('.miscModal').style.display = 'block;';
-            // myApp.closeMiscModal();
+            myApp.closeModal();
             };
         })
     
@@ -74,6 +74,15 @@ myApp.weatherContainer = document.querySelector('.weatherDescription');
         myApp.weatherContainer.innerHTML = "";
         displayData.textContent = (`The temperature is currently ${weatherResults.main.temp}, it feels like ${weatherResults.main.feels_like}. Weather Description: ${weatherResults.weather[0].description}.`)
         myApp.weatherContainer.append (displayData);
+    }
+
+    myApp.closeModal = () => {
+        document.querySelector(".close").addEventListener("click", (event) => {
+            event.explicitOriginalTarget.parentElement.parentElement.style.display = "none";
+            console.log(event);
+
+        })
+
     }
 
     
