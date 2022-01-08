@@ -1,0 +1,69 @@
+// K -> A: This is our partial for general styling.
+
+html {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-image: linear-gradient(to right bottom, #fde700, #c5f150, #93f484, #6cf2b1, #61ecd3, #5fe5dd, #66dde3, #74d4e4, #67cce2, #5cc3df, #51bbdd, #47b2da)
+}
+
+h1 {
+    font-size: 80px;
+    text-align: center;
+}
+
+.wrapper {
+   max-width: 1200px;
+   width: 90vw;
+   margin: 0 auto; 
+}
+
+.searchInput {
+    font-size: 60px;
+}
+
+.inputAndButton {
+    display: flex;
+    justify-content: center;
+    padding: 5%;
+}
+
+.spellingModal,
+.miscModal {
+    display: none;
+}
+
+.parkImage,
+.weatherPhoto {
+    max-width: 50%;
+        img {
+            width: 100%;
+        }
+}
+
+.contentContainer {
+    display: flex;
+    justify-content: space-around;
+}
+
+form {
+    text-align: center;
+        label {
+            text-align: center;
+        }
+        .inputAndButton {
+            input {
+                width: 70%;
+                padding: 25px 0;
+                text-align: center;
+                border: 1px solid black;
+            }
+            button {
+                padding: 15px;
+                background-color: white;
+                border: 1px solid black;
+            }
+        }
+}
+

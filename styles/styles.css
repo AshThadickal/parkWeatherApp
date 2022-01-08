@@ -273,3 +273,38 @@ h1 {
 .miscModal {
   display: none;
 }
+
+.parkImage,
+.weatherPhoto {
+  max-width: 50%;
+}
+.parkImage img,
+.weatherPhoto img {
+  width: 100%;
+}
+
+.contentContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+form {
+  text-align: center;
+}
+form label {
+  text-align: center;
+}
+form .inputAndButton input {
+  width: 70%;
+  padding: 25px 0;
+  text-align: center;
+  border: 1px solid black;
+}
+form .inputAndButton button {
+  padding: 15px;
+  background-color: white;
+  border: 1px solid black;
+}
