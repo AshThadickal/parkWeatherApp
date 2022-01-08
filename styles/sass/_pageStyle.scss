@@ -5,10 +5,8 @@ html {
 }
 
 body {
-    background-color: #47b2da;
+    background-image: linear-gradient(to right bottom, #fde700, #c5f150, #93f484, #6cf2b1, #61ecd3, #5fe5dd, #66dde3, #74d4e4, #67cce2, #5cc3df, #51bbdd, #47b2da)
 }
-
-// K -> A: I was thinking of using this gradient for the BG but it just won't cover the whole page when I try to run it.     background-image: linear-gradient(to right bottom, #fde700, #c5f150, #93f484, #6cf2b1, #61ecd3, #5fe5dd, #66dde3, #74d4e4, #67cce2, #5cc3df, #51bbdd, #47b2da);
 
 h1 {
     font-size: 80px;
@@ -16,9 +14,9 @@ h1 {
 }
 
 .wrapper {
+   max-width: 1200px;
    width: 90vw;
    margin: 0 auto; 
-   max-width: 1200px;
 }
 
 .searchInput {
@@ -31,7 +29,8 @@ h1 {
     padding: 5%;
 }
 
-.modal {
+.spellingModal,
+.miscModal {
     display: none;
 }
 

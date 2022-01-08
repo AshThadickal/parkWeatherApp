@@ -10,24 +10,6 @@
 
 // manipulate the page such that the value from the stored variables will be displayed to the user byway of a template literal with ${variable}
 
-// fetch('https://api.openweathermap.org/data/2.5/weather?q=ottwa&appid=4310fd1fc9ffb9abc888f8569b40e704')
-//     .then(function (response) {
-//         if (response.ok) {
-//         return response.json();
-//         } else {
-//             throw new Error(response.statusText)
-//         }
-//     })
-//     .then(function (jsonResult) {
-//         console.log(jsonResult)
-//         })
-//     .catch((err) => {
-//         if (err.message) {
-//             console.log('we did it')
-//         }
-//     })
-
-
 // 1. Create Namespace Object 
 
 const myApp = {}
@@ -40,15 +22,15 @@ myApp.init = () => {
 
 // - Add API key as property to our namespace object
 
-myApp.key = ('4310fd1fc9ffb9abc888f8569b40e704')
 myApp.url = ('https://api.openweathermap.org/data/2.5/weather');
-
+myApp.key = ('4310fd1fc9ffb9abc888f8569b40e704');
 
 myApp.userInput = () => {
     const form = document.querySelector('form');
     form.addEventListener('submit', (event) => {
-        event.preventDefault;
+        event.preventDefault();
         myApp.userCity = form[0].value;
+        console.log(myApp.userCity);
         myApp.getWeather(myApp.userCity);
     })
 }
@@ -64,35 +46,37 @@ myApp.getWeather = (searchQuery) => {
     fetch(url) 
         .then((res) => {
             if (res.ok === true){
-            return res.json ();
+            return res.json();
             } else {
-                throw new Error (res.statusText)
+                throw new Error(res.statusText)
             }                
-        })
+        }) 
         .then((jsonData) => {
             myApp.displayWeather(jsonData);
-            // call a function to display the data with the jsonData results
         })
         .catch((err) => {
             if (err.message === "Not Found") {
-            alert("City Not Found");
+                document.querySelector('.spellingModal').style.display = 'block';
+                // myApp.closeSpellingModal();
             } else {
-            alert("Something went wrong");
-            }
+            document.querySelector('.miscModal').style.display = 'block;';
+            // myApp.closeMiscModal();
+            };
         })
     
 
 }
 
+myApp.weatherContainer = document.querySelector('.weatherDescription');
 
     myApp.displayWeather = (weatherResults) => {
-        const weatherContainer = document.querySelector('.weatherDescription');
         const displayData = document.createElement('p');
+        myApp.weatherContainer.innerHTML = "";
         displayData.textContent = (`The temperature is currently ${weatherResults.main.temp}, it feels like ${weatherResults.main.feels_like}. Weather Description: ${weatherResults.weather[0].description}.`)
-       
-        weatherContainer.innerHTML = "";
-        weatherContainer.append (displayData);
+        myApp.weatherContainer.append (displayData);
     }
+
+    
 
 myApp.init();
 
