@@ -236,6 +236,7 @@ html {
 }
 
 html {
+  font-size: 125%;
   font-family: "Poppins", sans-serif;
 }
 
@@ -245,7 +246,7 @@ body {
 }
 
 h1 {
-  font-size: 80px;
+  font-size: 4rem;
   text-align: center;
 }
 
@@ -256,7 +257,7 @@ h1 {
 }
 
 .searchInput {
-  font-size: 60px;
+  font-size: 3rem;
 }
 
 .inputAndButton {
@@ -267,6 +268,7 @@ h1 {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 5%;
+  font-size: 1rem;
 }
 
 .spellingModal,
@@ -309,6 +311,14 @@ form .inputAndButton button {
   border: 1px solid black;
 }
 
+footer {
+  text-align: center;
+}
+footer a {
+  text-decoration: none;
+  color: black;
+}
+
 .weatherDescription {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -317,4 +327,8 @@ form .inputAndButton button {
       -ms-flex-align: center;
           align-items: center;
   padding-left: 5%;
+  width: 50%;
+}
+.weatherDescription p {
+  font-size: 1.5rem;
 }

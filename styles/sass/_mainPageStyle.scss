@@ -1,15 +1,12 @@
 // K -> A: This is our partial for general styling.
 
-html {
-    font-family: 'Poppins', sans-serif;
-}
 
 body {
     background-image: linear-gradient(to right bottom, #fde700, #c5f150, #93f484, #6cf2b1, #61ecd3, #5fe5dd, #66dde3, #74d4e4, #67cce2, #5cc3df, #51bbdd, #47b2da)
 }
 
 h1 {
-    font-size: 80px;
+    font-size: 4rem;
     text-align: center;
 }
 
@@ -20,13 +17,14 @@ h1 {
 }
 
 .searchInput {
-    font-size: 60px;
+    font-size: 3rem;
 }
 
 .inputAndButton {
     display: flex;
     justify-content: center;
     padding: 5%;
+    font-size: 1rem;
 }
 
 .spellingModal,
@@ -64,6 +62,14 @@ form {
                 background-color: white;
                 border: 1px solid black;
             }
+        }
+}
+
+footer {
+    text-align: center;
+        a {
+        text-decoration: none;
+        color: black;
         }
 }
 
