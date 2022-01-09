@@ -32,6 +32,7 @@ myApp.userInput = () => {
         myApp.userCity = form[0].value;
         console.log(myApp.userCity);
         myApp.getWeather(myApp.userCity);
+        document.getElementById('searchBar').value = '';
     })
 }
 

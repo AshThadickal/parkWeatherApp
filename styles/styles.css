@@ -241,8 +241,7 @@ html {
 }
 
 body {
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#fde700), color-stop(#c5f150), color-stop(#93f484), color-stop(#6cf2b1), color-stop(#61ecd3), color-stop(#5fe5dd), color-stop(#66dde3), color-stop(#74d4e4), color-stop(#67cce2), color-stop(#5cc3df), color-stop(#51bbdd), to(#47b2da));
-  background-image: linear-gradient(to right bottom, #fde700, #c5f150, #93f484, #6cf2b1, #61ecd3, #5fe5dd, #66dde3, #74d4e4, #67cce2, #5cc3df, #51bbdd, #47b2da);
+  background-color: #74d4e4;
 }
 
 h1 {
@@ -291,6 +290,7 @@ h1 {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  padding-top: 5%;
 }
 
 form {
@@ -313,6 +313,7 @@ form .inputAndButton button {
 
 footer {
   text-align: center;
+  padding-top: 5%;
 }
 footer a {
   text-decoration: none;
@@ -331,4 +332,32 @@ footer a {
 }
 .weatherDescription p {
   font-size: 1.5rem;
+}
+
+.spellingModal,
+.miscModal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.popUp {
+  background-color: #FFE66B;
+  width: 70%;
+  padding: 3% 0;
+  position: fixed;
+  top: 30%;
+  left: 15%;
+  border: 1px solid black;
+  border-radius: 5px;
+  text-align: center;
+}
+.popUp button {
+  padding: 1%;
+  margin-bottom: 1%;
 }

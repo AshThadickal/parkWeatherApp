@@ -2,7 +2,8 @@
 
 
 body {
-    background-image: linear-gradient(to right bottom, #fde700, #c5f150, #93f484, #6cf2b1, #61ecd3, #5fe5dd, #66dde3, #74d4e4, #67cce2, #5cc3df, #51bbdd, #47b2da)
+    background-color: #74d4e4;
+    // background-image: linear-gradient(to right bottom, #fde700, #c5f150, #93f484, #6cf2b1, #61ecd3, #5fe5dd, #66dde3, , #67cce2, #5cc3df, #51bbdd, #47b2da)
 }
 
 h1 {
@@ -43,6 +44,7 @@ h1 {
 .contentContainer {
     display: flex;
     justify-content: space-around;
+    padding-top: 5%;
 }
 
 form {
@@ -67,6 +69,7 @@ form {
 
 footer {
     text-align: center;
+    padding-top: 5%;
         a {
         text-decoration: none;
         color: black;
