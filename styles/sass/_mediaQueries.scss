@@ -1,0 +1,60 @@
+@media (max-width:768px) {
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    .searchInput {
+        font-size: 2.5rem;
+    }
+
+    .weatherDescription p {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width:547px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    .searchInput {
+        font-size: 2rem;
+    } 
+
+    .weatherDescription p {
+        font-size: 1rem;
+    }
+
+    
+    form .inputAndButton input {
+        padding: 0%;
+    }
+
+    .contentContainer {
+        flex-direction: column-reverse;
+        padding: 0%;
+                    .weatherDescription {
+                    width: 100%;
+                    padding: 0%;
+                    text-align: center;
+                }    
+            .parkImage {
+                max-width: 100%;
+                }
+    }
+
+}
+
+@media (max-width: 420px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .searchInput {
+        font-size: 1.5rem;
+    } 
+
+    footer {
+        padding-top: 50px;
+    }
+}

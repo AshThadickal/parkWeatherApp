@@ -290,7 +290,7 @@ h1 {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  padding-top: 5%;
+  padding-top: 60px;
 }
 
 form {
@@ -313,7 +313,7 @@ form .inputAndButton button {
 
 footer {
   text-align: center;
-  padding-top: 5%;
+  padding-top: 100px;
 }
 footer a {
   text-decoration: none;
@@ -360,4 +360,64 @@ footer a {
 .popUp button {
   padding: 1%;
   margin-bottom: 1%;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  .searchInput {
+    font-size: 2.5rem;
+  }
+
+  .weatherDescription p {
+    font-size: 1.3rem;
+  }
+}
+@media (max-width: 547px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  .searchInput {
+    font-size: 2rem;
+  }
+
+  .weatherDescription p {
+    font-size: 1rem;
+  }
+
+  form .inputAndButton input {
+    padding: 0%;
+  }
+
+  .contentContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    padding: 0%;
+  }
+  .contentContainer .weatherDescription {
+    width: 100%;
+    padding: 0%;
+    text-align: center;
+  }
+  .contentContainer .parkImage {
+    max-width: 100%;
+  }
+}
+@media (max-width: 420px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .searchInput {
+    font-size: 1.5rem;
+  }
+
+  footer {
+    padding-top: 50px;
+  }
 }
