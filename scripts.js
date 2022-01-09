@@ -32,6 +32,7 @@ myApp.userInput = () => {
         myApp.userCity = form[0].value;
         console.log(myApp.userCity);
         myApp.getWeather(myApp.userCity);
+        document.getElementById('searchBar').value = '';
     })
 }
 
@@ -72,7 +73,7 @@ myApp.weatherContainer = document.querySelector('.weatherDescription');
     myApp.displayWeather = (weatherResults) => {
         const displayData = document.createElement('p');
         myApp.weatherContainer.innerHTML = "";
-        displayData.textContent = (`The temperature is currently ${weatherResults.main.temp}, it feels like ${weatherResults.main.feels_like}. Weather Description: ${weatherResults.weather[0].description}.`)
+        displayData.textContent = (`The temperature in ${myApp.userCity} is currently ${weatherResults.main.temp}º, BUT, it feels like ${weatherResults.main.feels_like}º. The situation out there is ${weatherResults.weather[0].description}.`)
         myApp.weatherContainer.append (displayData);
     }
 

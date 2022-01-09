@@ -13,7 +13,7 @@
 <body>
 
     <header class="wrapper">
-        <h1>Can We Go <span>To The Park</span> <span>Today?</span></h1>
+        <h1>Can We Go To The Park Today?</h1>
     </header>
 
     <main>
@@ -22,7 +22,7 @@
             <form action="#" method="#" class="search" name="search">
                 <label for="searchInput" class ="searchInput">Please enter your city:</label>
                 <div class = "inputAndButton">
-                    <input type="text" placeholder="Toronto" id="searchBar">
+                    <input class="input" type="text" placeholder="Example: Toronto" id="searchBar">
                     <button type="submit">GO!</button>
                 </div>
             </form>
@@ -31,18 +31,20 @@
         </section>
         
         <section class="wrapper">
-            
-            <div class="weatherPhoto">
-                <!-- Weather photo goes here -->
-            </div>
-            
-            <div class="weatherDescription">
-                <!-- weather description goes here -->
-            </div>
-            
-            <div class="parkImage">
-                <!-- Photo by Jason Kim from Pexels -->
-                <img src="Assets/pexels-jason-kim-5785548.jpg" alt="Photo of a slide with swings in the background">
+            <div class="contentContainer">
+                <div class="parkImage">
+                    <!-- Photo by Jason Kim from Pexels -->
+                    <img src="Assets/pexels-jason-kim-5785548.jpg" alt="Photo of a slide with swings in the background">
+                </div>
+                <div class="weatherPhoto">
+                    <!-- Weather photo goes here -->
+                </div>
+                
+                <div class="weatherDescription">
+                    <!-- weather description goes here -->
+                    <p>Enter your city name above and decide if today is a park day!</p>
+                </div>
+                
             </div>
 
             <div class="spellingModal">

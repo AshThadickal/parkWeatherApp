@@ -1,10 +1,5 @@
 @import "setup";
-@import "pageStyle.scss"
-
-
-
-// font-family: 'Poppins', sans-serif;
-
-// body {
-//     background: white;
-// }
+@import "mainPageStyle.scss";
+@import "resultsStyle.scss";
+@import "errorStyle.scss";
+@import "mediaQueries";
