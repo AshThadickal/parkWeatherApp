@@ -78,15 +78,12 @@ myApp.weatherContainer = document.querySelector('.weatherDescription');
     }
 
     myApp.closeModal = () => {
-        document.querySelector(".close").addEventListener("click", (event) => {
-            event.explicitOriginalTarget.parentElement.parentElement.style.display = "none";
-            console.log(event);
-
+        document.querySelector(".popUp").addEventListener("click", () => {
+            document.querySelector('.spellingModal').style.display = 'none';
+            document.querySelector('.miscModal').style.display = 'none';
         })
 
     }
-
-    
 
 myApp.init();
 
