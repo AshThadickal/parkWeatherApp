@@ -1,9 +1,6 @@
-// K -> A: This is our partial for general styling.
-
 
 body {
     background-color: #74d4e4;
-    // background-image: linear-gradient(to right bottom, #fde700, #c5f150, #93f484, #6cf2b1, #61ecd3, #5fe5dd, #66dde3, , #67cce2, #5cc3df, #51bbdd, #47b2da)
 }
 
 h1 {
@@ -17,55 +14,44 @@ h1 {
    margin: 0 auto; 
 }
 
-.searchInput {
-    font-size: 3rem;
-}
-
-.inputAndButton {
-    display: flex;
-    justify-content: center;
-    padding: 5%;
-    font-size: 1rem;
-}
-
-.spellingModal,
-.miscModal {
-    display: none;
-}
-
-.parkImage,
-.weatherPhoto {
-    max-width: 50%;
-        img {
-            width: 100%;
+form {
+    text-align: center;
+        label {
+            text-align: center;
+            font-size: 3rem;
+        }
+        .inputAndButton {
+            display: flex;
+            justify-content: center;
+            padding: 5%;
+            font-size: 1rem;
+                input {
+                    width: 70%;
+                    padding: 25px 0;
+                    text-align: center;
+                    border: 1px solid black;
+                }
+                button {
+                    padding: 15px;
+                    background-color: white;
+                    border: 1px solid black;
+                }
         }
 }
+// End of Form Styling
 
 .contentContainer {
     display: flex;
     justify-content: space-around;
     padding-top: 60px;
-}
-
-form {
-    text-align: center;
-        label {
-            text-align: center;
-        }
-        .inputAndButton {
-            input {
-                width: 70%;
-                padding: 25px 0;
-                text-align: center;
-                border: 1px solid black;
-            }
-            button {
-                padding: 15px;
-                background-color: white;
-                border: 1px solid black;
-            }
+        .parkImage {
+            max-width: 50%;
+                img {
+                    width: 100%;
+                }
         }
 }
+// End of Content Container Styling
 
 footer {
     text-align: center;
@@ -75,4 +61,5 @@ footer {
         color: black;
         }
 }
+// End of Footer Styling
 

@@ -202,15 +202,6 @@ template {
   display: none;
 }
 
-.clearfix:after {
-  visibility: hidden;
-  display: block;
-  font-size: 0;
-  content: "";
-  clear: both;
-  height: 0;
-}
-
 html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -219,20 +210,6 @@ html {
 *, *:before, *:after {
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
-}
-
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  -webkit-clip-path: inset(100%);
-          clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
 }
 
 html {
@@ -255,11 +232,14 @@ h1 {
   margin: 0 auto;
 }
 
-.searchInput {
+form {
+  text-align: center;
+}
+form label {
+  text-align: center;
   font-size: 3rem;
 }
-
-.inputAndButton {
+form .inputAndButton {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -268,36 +248,6 @@ h1 {
           justify-content: center;
   padding: 5%;
   font-size: 1rem;
-}
-
-.spellingModal,
-.miscModal {
-  display: none;
-}
-
-.parkImage,
-.weatherPhoto {
-  max-width: 50%;
-}
-.parkImage img,
-.weatherPhoto img {
-  width: 100%;
-}
-
-.contentContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  padding-top: 60px;
-}
-
-form {
-  text-align: center;
-}
-form label {
-  text-align: center;
 }
 form .inputAndButton input {
   width: 70%;
@@ -309,6 +259,21 @@ form .inputAndButton button {
   padding: 15px;
   background-color: white;
   border: 1px solid black;
+}
+
+.contentContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-top: 60px;
+}
+.contentContainer .parkImage {
+  max-width: 50%;
+}
+.contentContainer .parkImage img {
+  width: 100%;
 }
 
 footer {
@@ -380,14 +345,9 @@ footer a {
     font-size: 3rem;
   }
 
-  .searchInput {
+  form .searchInput {
     font-size: 2rem;
   }
-
-  .weatherDescription p {
-    font-size: 1rem;
-  }
-
   form .inputAndButton input {
     padding: 0%;
   }
@@ -403,6 +363,9 @@ footer a {
     width: 100%;
     padding: 0%;
     text-align: center;
+  }
+  .contentContainer .weatherDescription p {
+    font-size: 1rem;
   }
   .contentContainer .parkImage {
     max-width: 100%;

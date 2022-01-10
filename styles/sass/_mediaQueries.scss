@@ -1,4 +1,4 @@
-@media (max-width:768px) {
+@media (max-width: 768px) {
     h1 {
         font-size: 3.5rem;
     }
@@ -11,39 +11,40 @@
         font-size: 1.3rem;
     }
 }
+// End of 768px
 
-@media (max-width:547px) {
+@media (max-width: 547px) {
     h1 {
         font-size: 3rem;
     }
 
-    .searchInput {
-        font-size: 2rem;
-    } 
+    form {
+        .searchInput {
+            font-size: 2rem;
+        } 
 
-    .weatherDescription p {
-        font-size: 1rem;
-    }
-
-    
-    form .inputAndButton input {
-        padding: 0%;
+        .inputAndButton input {
+            padding: 0%;
+        }
     }
 
     .contentContainer {
         flex-direction: column-reverse;
         padding: 0%;
-                    .weatherDescription {
-                    width: 100%;
-                    padding: 0%;
-                    text-align: center;
-                }    
+            .weatherDescription {
+                width: 100%;
+                padding: 0%;
+                text-align: center;
+                    p {
+                        font-size: 1rem;
+                    }
+            }    
             .parkImage {
                 max-width: 100%;
                 }
     }
-
 }
+// End of 547px
 
 @media (max-width: 420px) {
     h1 {
@@ -58,3 +59,4 @@
         padding-top: 50px;
     }
 }
+// End of 420px
