@@ -4,7 +4,7 @@ body {
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
     text-align: center;
 }
 
@@ -18,7 +18,7 @@ form {
     text-align: center;
         label {
             text-align: center;
-            font-size: 3rem;
+            font-size: 2.5rem;
         }
         .inputAndButton {
             display: flex;
@@ -43,7 +43,7 @@ form {
 .contentContainer {
     display: flex;
     justify-content: space-around;
-    padding-top: 60px;
+    padding-top: 25px;
         .parkImage {
             max-width: 50%;
                 img {
@@ -55,7 +55,7 @@ form {
 
 footer {
     text-align: center;
-    padding-top: 100px;
+    padding-top: 15px;
         a {
         text-decoration: none;
         color: black;
