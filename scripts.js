@@ -37,7 +37,6 @@ myApp.userInput = () => {
     form.addEventListener('submit', (event) => {
         event.preventDefault();
         myApp.userCity = form[0].value;
-        console.log(myApp.userCity);
         myApp.getWeather(myApp.userCity);
         document.getElementById('searchBar').value = '';
     })
@@ -60,7 +59,6 @@ myApp.getWeather = (searchQuery) => {
             }                
         }) 
         .then((jsonData) => {
-            console.log(jsonData);
             myApp.displayWeather(jsonData);
             myApp.displayWeatherImg(jsonData); 
         })
