@@ -379,4 +379,8 @@ footer a {
   .searchInput {
     font-size: 1.5rem;
   }
+
+  .inputAndButton button {
+    font-size: 0.8rem;
+  }
 }
