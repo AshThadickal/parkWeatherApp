@@ -25,8 +25,15 @@ myApp.weatherImgs = {
 }
 
 myApp.init = () => {
+    // myApp.pageLoad();
     myApp.userInput();
 }
+
+// myApp.pageLoad = () => {
+//     window.addEventListener('load', (event) => {
+//         myApp.loading();
+//     });
+// }
 
 myApp.url = ('https://api.openweathermap.org/data/2.5/weather');
 myApp.key = ('4310fd1fc9ffb9abc888f8569b40e704');
@@ -42,8 +49,23 @@ myApp.userInput = () => {
     })
 }
 
+// loading image to wait for API and image load
+const loader = document.querySelector('.loading');
+myApp.loading = () => {
+    loader.classList.add('display');
+    setTimeout(() => {
+        loader.classList.remove('display');
+    }, 2000);
+}
+
+// to hide loading
+myApp.hideLoading = () => {
+    loader.classList.remove('display')
+}
+
 // Get Data from API
 myApp.getWeather = (searchQuery) => {
+    myApp.loading()
     const url = new URL (myApp.url);
     url.search = new URLSearchParams ({
         q: searchQuery,
@@ -61,6 +83,7 @@ myApp.getWeather = (searchQuery) => {
         .then((jsonData) => {
             myApp.displayWeather(jsonData);
             myApp.displayWeatherImg(jsonData); 
+            myApp.hideLoading()
         })
         .catch((err) => {
             if (err.message === 'Not Found') {
