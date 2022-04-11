@@ -306,7 +306,6 @@ form .inputAndButton button {
   position: absolute;
   top: 0;
   right: 0;
-  background-color: #c1f6ff;
 }
 
 @-webkit-keyframes spin {
